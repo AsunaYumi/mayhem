@@ -3,7 +3,8 @@
         {
             "name": "Win32",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "E:\\Projects\\git\\mayhem\\mayhem\\vendor\\spdlog\\include"
             ],
             "defines": [
                 "_DEBUG",
