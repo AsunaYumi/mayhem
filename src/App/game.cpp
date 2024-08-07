@@ -19,5 +19,6 @@ public:
 
 Mayhem::Application *Mayhem::CreateApplication()
 {
+    printf("hewwo?\n");
     return new Sandbox();
 }

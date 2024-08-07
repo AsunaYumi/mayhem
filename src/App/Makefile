@@ -1,8 +1,27 @@
 
-debug: build run
+ifndef config
+	config=debug
+endif
+
+OUTDIR = ../../bin/$(config)/$(platform)
+OUTFILE = $(OUTDIR)/app.exe
+LIBS = $(OUTDIR)/mayhem.dll -lopengl32
+INCLUDES = -I../../vendor/spdlog/include -I.. -I../../vendor/GLFW/include
+STANDART = c++17
+
+ifeq (windows,$(platform))
+	DEFINES += -DMH_PLATFORM_WINDOWS
+endif
+
+ifeq ($(config),debug)
+	DEFINES += -DMH_DEBUG
+endif
+ifeq ($(config),release)
+	DEFINES += -DMH_RELEASE
+endif
+ifeq ($(config),dist)
+	DEFINES += -DMH_DIST
+endif
 
 build:
-	g++ *.cpp -std=c++20 -o ../../out/app.exe -I../ ../../out/engine.dll -DMH_PLATFORM_WINDOWS -I../../vendor/spdlog/include
-
-run: ../../out/app.exe
-	../../out/app.exe
+	@g++ -o $(OUTFILE) *.cpp  $(LIBS) $(INCLUDES) $(DEFINES) -std=$(STANDART)

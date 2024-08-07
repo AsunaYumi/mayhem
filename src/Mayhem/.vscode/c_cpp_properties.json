@@ -5,14 +5,16 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/../**",
-                "E:\\Projects\\git\\mayhem\\mayhem\\vendor\\spdlog\\include"
+                "E:\\Projects\\git\\mayhem\\mayhem\\vendor\\spdlog\\include",
+                "E:\\Projects\\git\\mayhem\\mayhem\\vendor\\GLFW\\include"
             ],
             "defines": [
                 "_DEBUG",
                 "UNICODE",
                 "_UNICODE",
                 "MH_BUILD_LIB",
-                "MH_PLATFORM_WINDOWS"
+                "MH_PLATFORM_WINDOWS",
+                "MH_ENABLE_ASSERTS"
             ],
             "windowsSdkVersion": "10.0.22000.0",
             "compilerPath": "cl.exe",

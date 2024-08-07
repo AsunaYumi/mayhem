@@ -1,19 +1,26 @@
 #pragma once
 
-#ifdef MH_PLATFORM_WINDOWS
+#include "Mayhem/Log.h"
+#include <stdio.h>
 
 extern Mayhem::Application *Mayhem::CreateApplication();
 
 int main(int argc, char **argv)
 {
-    Mayhem::Log::Init();
-    MH_CORE_WARN("hewwo!!");
-    int a = 345;
-    MH_INFO("uwuwuwu!! Var={0}", a);
-
+    try
+    {
+    printf("cmon do smth\n");
+    MH_CORE_INFO("Launching...");
     auto app = Mayhem::CreateApplication();
     app->Run();
     delete app;
+    }
+    catch(std::runtime_error e)
+    {
+        printf("ERROR %s\n", e.what());
+    }
 }
+
+#ifdef MH_PLATFORM_WINDOWS
 
 #endif

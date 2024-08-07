@@ -8,7 +8,7 @@
             "name": "Compile and run application",
             "type": "f5anything",
             "request": "launch",
-            "command": "make",
+            "command": "make --no-print-directory -C ../.. -f Makefile config=debug platform=windows App ; ../../bin/debug/windows/app.exe",
             "terminalName": "Application",
             "terminalIndex": -1,
             "showTerminal": true,

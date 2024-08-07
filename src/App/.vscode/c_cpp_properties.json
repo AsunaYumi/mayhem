@@ -6,7 +6,8 @@
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/../**",
                 "${workspaceFolder}/../",
-                "E:\\Projects\\git\\mayhem\\mayhem\\vendor\\spdlog\\include"
+                "E:\\Projects\\git\\mayhem\\mayhem\\vendor\\spdlog\\include",
+                "E:\\Projects\\git\\mayhem\\mayhem\\vendor\\GLFW\\include"
             ],
             "defines": [
                 "_DEBUG",
